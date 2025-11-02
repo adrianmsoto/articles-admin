@@ -19,10 +19,7 @@ export default function ArticleForm() {
     image: "",
     rating: 0,
   });
-
   const [errors, setErrors] = useState<Record<string, string>>({});
-
-  // Get List
   const articles = queryClient.getQueryData<Article[]>(["articles"]);
   const existing = articles?.find((a) => a.id === Number(id));
 
@@ -46,6 +43,14 @@ export default function ArticleForm() {
       ...formData,
       [name]: type === "number" ? Number(value) : value,
     });
+
+    if (errors[name]) {
+      setErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {

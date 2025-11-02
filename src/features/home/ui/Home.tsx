@@ -5,7 +5,7 @@ const Home = () => {
 
       <section className="space-y-2">
         <h2 className="text-2xl font-semibold">
-          ✅ Funcionalidades Implementadas
+          Funcionalidades Implementadas
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>Listado de artículos</li>
@@ -17,6 +17,7 @@ const Home = () => {
           <li>Agregar artículos a favoritos en localStorage</li>
           <li>Categorías y subcategorías de artículos con filtros</li>
           <li>Eliminar artículos</li>
+          <li>Cypress</li>
           <li>Test</li>
         </ul>
       </section>
@@ -33,7 +34,6 @@ const Home = () => {
             Separación clara entre lógica de dominio y adaptadores (HTTP,
             almacenamiento, UI)
           </li>
-          <li>React Router con rutas anidadas</li>
           <li>Redux: para controlar theme</li>
         </div>
       </section>
@@ -46,15 +46,6 @@ const Home = () => {
           <li>Manejo de errores: red, artículos inexistentes, timeouts</li>
           <li>Código legible, consistente y documentado</li>
         </ul>
-      </section>
-
-      <section className="space-y-2">
-        <h2 className="text-2xl font-semibold">Objetivo</h2>
-        <p>
-          Proyecto listo para mostrar en entrevistas: incluye todas las
-          funcionalidades básicas y avanzadas de gestión de artículos, siguiendo
-          buenas prácticas de React, Redux, React Query y pruebas.
-        </p>
       </section>
     </div>
   );
