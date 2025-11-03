@@ -42,9 +42,7 @@ cypress/ # E2E tests
 - **Vertical slice:** each feature contains UI, domain logic, API, redux slice, and tests.  
 - **Hexagonal-inspired:** domain (pure logic) is decoupled from adapters (API) and UI.  
 - **State separation:** React Query for server data, Redux for UI state like theme & favorites.
-
-## Requirements
-- Node.js 18+ - npm 9+ - Browser: Chrome / Firefox recommended  
+- **Lazy loading:** routes and heavy components are loaded on demand with `React.lazy` and `Suspense` to improve performance.
 
 ---
 ## Installation
@@ -101,6 +99,7 @@ Visit http://localhost:5173  -> to see the app running with Fast Refresh.
 State management
 - React Query: manages server state (articles fetching, caching, updates). Optimistic updates used for rating/favorites.
 - Redux Toolkit: manages UI state (theme toggle, favorites). Favorites are persisted in Redux for instant feedback, while articles remain authoritative in the server/mock API.
+- **Lazy Loading with React.lazy + Suspense:** reduces bundle size by loading article-related pages (list, form, detail, favorites) only when users navigate to them.  
 - Local storages: to Manages Favorites
 
 ## Architecture
