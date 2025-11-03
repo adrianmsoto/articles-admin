@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import type { RootState } from "../core/store";
 import { Link } from "react-router-dom";
+import type { RootState } from "../../../core/store";
 
 const Favorites = () => {
   const favorites = useSelector((state: RootState) => state.favorites);

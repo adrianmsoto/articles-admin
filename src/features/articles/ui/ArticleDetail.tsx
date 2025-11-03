@@ -65,6 +65,7 @@ const ArticleDetail = () => {
         {/* Image */}
         <div className="flex-1 overflow-hidden rounded-2xl">
           <img
+            loading="lazy"
             src={data?.image || "https://picsum.photos/600/400?blur=3"}
             alt={data?.title || "Default image"}
             className="w-full h-48 md:h-36 object-cover transition-transform duration-500 hover:scale-105"
